@@ -1,5 +1,3 @@
-# Need to change YOUR_CLUSTER and YOUR_API_TOKEN accordingly
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -25,14 +23,14 @@ spec:
         env:
         - name: WAVEFRONT_URL
           valueFrom:
-             secretKeyRef:
-               name: wavefront
-               key: wavefront-url
+            secretKeyRef:
+              name: wavefront
+              key: wavefront-url
         - name: WAVEFRONT_TOKEN
           valueFrom:
-             secretKeyRef:
-               name: wavefront
-               key: wavefront-api-token
+            secretKeyRef:
+              name: wavefront
+              key: wavefront-api-token
         # Uncomment the below lines to consume Zipkin/Istio traces
         - name: WAVEFRONT_PROXY_ARGS
           value: --traceZipkinListenerPorts 9411 --traceZipkinApplicationName spring-petclinic-k8s
