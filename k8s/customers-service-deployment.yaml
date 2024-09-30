@@ -18,7 +18,7 @@ spec:
         app: customers-service
     spec:
       containers:
-      - image: ${REPOSITORY_PREFIX}/spring-petclinic-cloud-customers-service:latest
+      - image: itsw075/customers-service:300924
         name: customers-service
         imagePullPolicy: Always
         livenessProbe:

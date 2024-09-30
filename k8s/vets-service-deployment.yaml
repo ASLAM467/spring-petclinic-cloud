@@ -17,7 +17,7 @@ spec:
         app: vets-service
     spec:
       containers:
-      - image: ${REPOSITORY_PREFIX}/spring-petclinic-cloud-vets-service:latest
+      - image: itsw075/vets-service:300924 
         name: vets-service
         imagePullPolicy: Always
         livenessProbe:

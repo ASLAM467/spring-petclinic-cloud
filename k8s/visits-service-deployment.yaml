@@ -17,7 +17,7 @@ spec:
         app: visits-service
     spec:
       containers:
-      - image: ${REPOSITORY_PREFIX}/spring-petclinic-cloud-visits-service:latest
+      - image:  itsw075/visits-service:300924
         name: visits-service
         imagePullPolicy: Always
         livenessProbe:
